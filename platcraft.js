@@ -51,7 +51,7 @@ const embed3 = new Discord.MessageEmbed()
                 const channelembed = new Discord.MessageEmbed()
                 .setDescription(`${message.author.username}, your ticket has been created.`)
                 message.channel.bulkDelete(1)
-                if(message.channel.id === '729424613687427072') {
+                if(message.channel.id === '706549903710486629') {
                  message.channel.send(channelembed)
 
                 counter += 1
@@ -79,13 +79,13 @@ const embed3 = new Discord.MessageEmbed()
                             allow: ['VIEW_CHANNEL'],
                         },
                         {
-                            id: '729424741760237650',
+                            id: '714237057094123570',
                             allow: ['VIEW_CHANNEL'],
                         },
                     ]
             }
             ).then(channel => {
-                channel.setParent('729424283952218122');
+                channel.setParent('714226877161537587');
                 channel.send(message.author.username + ', Thank you very much for reaching out! Please state your IGN and your Issue and our staff members will reach out to your ticket withing the next 24 hours!');
             });
             message.author.send('Thank you for creating a ticket ' + message.author.username + '! Your ticket will be answered by a Staff Member within 24 Hours. If not, please Tag 1 Staff Member and they will get right to you!')
@@ -98,7 +98,7 @@ const embed3 = new Discord.MessageEmbed()
 
 
                 case 'apply':
-                    if(message.channel.id === '729424613687427072') {
+                    if(message.channel.id === '706549903710486629') {
                      guild.channels.create('app-' + message.author.username, { 
                          type: 'text', 
                          permissionOverwrites: [
@@ -111,13 +111,13 @@ const embed3 = new Discord.MessageEmbed()
                                 allow: ['VIEW_CHANNEL'],
                             },
                             {
-                                id: '729424720771940413',
+                                id: '711987701510963302',
                                 allow: ['VIEW_CHANNEL'],
                             },
                         ]
                     }
                 ).then(channel => {
-                    channel.setParent('729424309117911041');
+                    channel.setParent('716371645597614100');
                     channel.send(embed2);
                     message.author.send('Thank you for creating an Application Ticket ' + message.author.username + '! Please answer **ALL** questions in the application ticket and the Senior Staff will decide if you will be accepted.')
                     console.log('[PlatinumCraft] ' + message.author.username + ' Has Created An Application!')
