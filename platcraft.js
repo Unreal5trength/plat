@@ -267,5 +267,5 @@ const embed3 = new Discord.MessageEmbed()
         }
 )
 
-client.login('NzA3MDU5MDgyOTA0NzMxNjYw.XwJP3g.J7f5mGiJmPZRLKDsmpAPhj7gmyk');
+client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
