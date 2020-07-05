@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const client = new Discord.Client(); 
-const prefix = "-"
 let counter = 0;
 const embed1 = new Discord.MessageEmbed()
 .setTitle('**All Discord Commands:**')
