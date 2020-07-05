@@ -1,1 +1,1 @@
-Worker: platcraft.js
+Worker: node platcraft.js
