@@ -21,7 +21,7 @@ const embed3 = new Discord.MessageEmbed()
     
     client.on('message', message => {
     
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    if (!message.content.startsWith(process.env.prefix) || message.author.bot) return;
     let args = message.content.substring(prefix.length).split(" ");
     const guild = message.guild
     switch(args[0]) {
