@@ -46,7 +46,7 @@ const embed3 = new Discord.MessageEmbed()
       
 
 
-            case 'ticket' || 'new':
+            case 'ticket':
                 const channelembed = new Discord.MessageEmbed()
                 .setDescription(`${message.author.username}, your ticket has been created.`)
                 message.channel.bulkDelete(1)
@@ -92,6 +92,54 @@ const embed3 = new Discord.MessageEmbed()
             console.log('[PlatinumCraft] ' + message.author.username + ' Has Created A Support Ticket!');
         }
                         break;
+
+
+                        case 'new':
+                            const channelembed = new Discord.MessageEmbed()
+                            .setDescription(`${message.author.username}, your ticket has been created.`)
+                            message.channel.bulkDelete(1)
+                            if(message.channel.id === '706549903710486629') {
+                             message.channel.send(channelembed)
+            
+                            counter += 1
+            
+                             var counterName 
+                             if (counter <= 10) {
+                               counterName = `#000${counter}`
+                             } else if (counter <= 100) {
+                               counterName = `#00${counter}`
+                             } else if (counter <= 1000) {
+                               counterName = `#0${counter}`
+                             } else {
+                               counterName = `#${counter}`
+                             }
+                             
+                             guild.channels.create((`ticket-${counterName}`), { 
+                                 type: 'text', 
+                                 permissionOverwrites: [
+                                    {
+                                        id: guild.id,
+                                        deny: ['VIEW_CHANNEL'],
+                                    },
+                                    {
+                                        id: message.author.id,
+                                        allow: ['VIEW_CHANNEL'],
+                                    },
+                                    {
+                                        id: '714237057094123570',
+                                        allow: ['VIEW_CHANNEL'],
+                                    },
+                                ]
+                        }
+                        ).then(channel => {
+                            channel.setParent('714226877161537587');
+                            channel.send(message.author.username + ', Thank you very much for reaching out! Please state your IGN and your Issue and our staff members will reach out to your ticket withing the next 24 hours!');
+                        });
+                        message.author.send('Thank you for creating a ticket ' + message.author.username + '! Your ticket will be answered by a Staff Member within 24 Hours. If not, please Tag 1 Staff Member and they will get right to you!')
+                       
+                        console.log('[PlatinumCraft] ' + message.author.username + ' Has Created A Support Ticket!');
+                    }
+                                    break;
 
 
 
