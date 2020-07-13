@@ -107,7 +107,6 @@ const embed3 = new Discord.MessageEmbed()
                         case 'new':
                             message.channel.bulkDelete(1)
                             if(message.channel.id === '706549903710486629') {
-                             message.channel.send(channelembed)
             
                             counter += 1
             
