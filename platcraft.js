@@ -46,7 +46,7 @@ const embed3 = new Discord.MessageEmbed()
       
 
 
-            case 'ticket':
+            case 'ticket' || 'new':
                 const channelembed = new Discord.MessageEmbed()
                 .setDescription(`${message.author.username}, your ticket has been created.`)
                 message.channel.bulkDelete(1)
