@@ -43,7 +43,17 @@ const embed3 = new Discord.MessageEmbed()
             
             message.channel.bulkDelete(args[1]);
                         break;
-      
+
+                        
+            case 'clear':
+            if (!message.member.roles.cache.some(role => role.name === "Senior Staff")) {
+                message.author.send("You do not have access to this command!");
+                return;
+            };
+            console.log('[PlatinumCraft] ' + args[1] + ' Messages Deleted.')
+                            
+            message.channel.bulkDelete(args[1]);
+                        break;
 
 
             case 'ticket':
@@ -95,8 +105,6 @@ const embed3 = new Discord.MessageEmbed()
 
 
                         case 'new':
-                            const channelembed = new Discord.MessageEmbed()
-                            .setDescription(`${message.author.username}, your ticket has been created.`)
                             message.channel.bulkDelete(1)
                             if(message.channel.id === '706549903710486629') {
                              message.channel.send(channelembed)
