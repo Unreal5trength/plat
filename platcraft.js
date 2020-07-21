@@ -326,7 +326,7 @@ client.on('guildMemberAdd', member => {
     client.on('message', 
     
     
-    member.guild.channels.get('JOIN/LEAVE Channel ID').send({embed: {
+    member.guild.channels.find('JOIN/LEAVE Channel ID').send({embed: {
     color: 3447003,
     title: "**SERVER NAME** Welcome Bot!",
     url: "WEBSITE URL",
