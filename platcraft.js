@@ -321,5 +321,14 @@ const embed3 = new Discord.MessageEmbed()
         }
 )
 
+
+client.on("guildMemberAdd" ,(message, member) => {
+    const WelcomeEmbed = new Discord.MessageEmbed();
+        setDescription(`Welcome ${message.user.username} to **PlatinumCraft**!\n\n> **IP:** PLAY.PLATINUMCRAFTOFFICIAL.COM\n**WEBSITE:** STORE.PLATINUMCRAFTOFFICIAL.COM\n**DISCORD:** DISCORD.PLATINUMCRAFTOFFICIAL.COM`)
+        addField('Date Joined:', message.createdAt, true)
+    member.guild.channels.get('channelID').send
+    }
+);
+
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
