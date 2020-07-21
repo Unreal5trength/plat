@@ -322,8 +322,7 @@ const embed3 = new Discord.MessageEmbed()
 )
 
 
-client.on('guildMemberAdd', member => {
-    client.on('message', 
+client.on('guildMemberAdd', member => { 
     
     
     member.guild.channels.find('JOIN/LEAVE Channel ID').send({embed: {
@@ -342,9 +341,10 @@ client.on('guildMemberAdd', member => {
       text: "© NAME OF SERVER 2018 - 2019"
                     }
                 }
-            }))
-        }
-    );
+            }
+        )
+    }
+);
 
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
