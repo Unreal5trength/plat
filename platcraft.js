@@ -323,10 +323,11 @@ const embed3 = new Discord.MessageEmbed()
 
 
 client.on("guildMemberAdd" ,(message, member) => {
+    const guild2 = message.guild
     const WelcomeEmbed = new Discord.MessageEmbed()
         .setDescription(`Welcome ${message.user.username} to **PlatinumCraft**!\n\n> **IP:** PLAY.PLATINUMCRAFTOFFICIAL.COM\n**WEBSITE:** STORE.PLATINUMCRAFTOFFICIAL.COM\n**DISCORD:** DISCORD.PLATINUMCRAFTOFFICIAL.COM`)
         .addField('Date Joined:', message.createdAt, true)
-    member.guild.channels.get('734941676669501446').send(WelcomeEmbed)
+    member.guild2.channels.get('734941676669501446').send(WelcomeEmbed)
     }
 );
 
