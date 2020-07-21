@@ -322,13 +322,29 @@ const embed3 = new Discord.MessageEmbed()
 )
 
 
-client.on("guildMemberAdd" ,(message, member) => {
-    const WelcomeEmbed = new Discord.MessageEmbed()
-        .setDescription(`Welcome ${message.user.username} to **PlatinumCraft**!\n\n> **IP:** PLAY.PLATINUMCRAFTOFFICIAL.COM\n**WEBSITE:** STORE.PLATINUMCRAFTOFFICIAL.COM\n**DISCORD:** DISCORD.PLATINUMCRAFTOFFICIAL.COM`)
-        .addField('Date Joined:', message.createdAt, true)
-    member.channels.get('734941676669501446').send(WelcomeEmbed)
-    }
-);
+client.on('guildMemberAdd', member => {
+    client.on('message', 
+    
+    
+    member.guild.channels.get('JOIN/LEAVE Channel ID').send({embed: {
+    color: 3447003,
+    title: "**SERVER NAME** Welcome Bot!",
+    url: "WEBSITE URL",
+    description: "Welcome *" + member + "* to the **Server name** discord server!",
+    fields: [{
+        name: "Information",
+        value: "Some info on the server"
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© NAME OF SERVER 2018 - 2019"
+                    }
+                }
+            }))
+        }
+    );
 
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
