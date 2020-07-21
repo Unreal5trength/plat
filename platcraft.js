@@ -325,7 +325,7 @@ const embed3 = new Discord.MessageEmbed()
 client.on('guildMemberAdd', member => { 
     
     
-    member.guild.channels.find('JOIN/LEAVE Channel ID').send({embed: {
+    member.guild.channels.find('734941676669501446').send({embed: {
     color: 3447003,
     title: "**SERVER NAME** Welcome Bot!",
     url: "WEBSITE URL",
