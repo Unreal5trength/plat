@@ -324,8 +324,8 @@ const embed3 = new Discord.MessageEmbed()
 
 client.on('guildMemberAdd', member => { 
     
-    
-    guild.channels.fetch('734941676669501446').send({embed: {
+    let guild2 = message.guild;
+    guild2.channels.fetch('734941676669501446').send({embed: {
     color: 3447003,
     title: "**SERVER NAME** Welcome Bot!",
     url: "WEBSITE URL",
