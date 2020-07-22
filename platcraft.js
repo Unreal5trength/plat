@@ -322,29 +322,5 @@ const embed3 = new Discord.MessageEmbed()
 )
 
 
-client.on('guildMemberAdd', member => { 
-    
-    let guild2 = message.guild;
-    guild2.channels.fetch('734941676669501446').send({embed: {
-    color: 3447003,
-    title: "**SERVER NAME** Welcome Bot!",
-    url: "WEBSITE URL",
-    description: "Welcome *" + member + "* to the **Server name** discord server!",
-    fields: [{
-        name: "Information",
-        value: "Some info on the server"
-      }
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© NAME OF SERVER 2018 - 2019"
-                    }
-                }
-            }
-        )
-    }
-);
-
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
