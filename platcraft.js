@@ -1,4 +1,6 @@
 const Discord = require('discord.js')
+const fs = require('fs');
+const yaml = require('js-yaml');
 const client = new Discord.Client(); 
 let counter = 0;
 const embed1 = new Discord.MessageEmbed()
