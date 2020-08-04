@@ -322,6 +322,36 @@ const embed3 = new Discord.MessageEmbed()
         }
 )
 
+client.on('message', message => {
+    if (message.content.toLowerCase() === '-trans') {
+        let Info;
+        message.channel.messages.fetch()
+        .then(data =>{
+        let arr = []
+        data.each(d =>{
+            if (d.deleted === true) { return;};
+            console.log(d)
+                    let str = `${d.author.username} \n${d.content} \n${d.createdAt}`;
+                    arr.push(str);
+        })
+               console.log(arr)
+                let tra = arr.join("\n");
+                fs.appendFile("Transcript.txt", tra, (err) => {
+                    if (err) throw err;
+                    console.log("Message logged");
+                    message.channel.send("Here is the transcript. If you have any questions, please let us know by making another ticket!", { files: ["./Transcript.txt"] })
+                            }
+                        )
+                        fs.writeFile("Transcript.txt", "", (err) => {
+                            if (err) throw err;
+                            console.log("Message cleared.");
+                                    } 
+                                )
+                    }
+                )
+            }
+        }
+    )
 
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
