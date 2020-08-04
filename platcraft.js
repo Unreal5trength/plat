@@ -324,6 +324,9 @@ const embed3 = new Discord.MessageEmbed()
 
 client.on('message', message => {
     if (message.content.toLowerCase() === '-trans') {
+        if (!message.member.roles.cache.some(role => role.name === "Senior Staff")) {
+            return false;
+        }
         let Info;
         message.channel.messages.fetch()
         .then(data =>{
