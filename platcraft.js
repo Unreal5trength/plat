@@ -315,6 +315,7 @@ const embed3 = new Discord.MessageEmbed()
                                       });
                             }
                             break;
+                            
 
                 
             }
@@ -324,3 +325,4 @@ const embed3 = new Discord.MessageEmbed()
 
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
+console.log("If not, regenerate the token and replace it in the code.")
