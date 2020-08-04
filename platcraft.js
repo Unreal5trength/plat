@@ -325,7 +325,8 @@ const embed3 = new Discord.MessageEmbed()
 
 client.on('message', message => {
     if (message.content.toLowerCase() === '-trans') {
-        if (!message.member.roles.cache.some(role => role.name === "Senior Staff")) {
+        if (!message.member.roles.cache.some(role => role.name === "Staff")) {
+            message.channel.send("You do not have access to this command! Please ask a Staff Member to give you your transcript!")
             return false;
         }
         let Info;
