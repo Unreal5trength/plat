@@ -319,7 +319,7 @@ const embed3 = new Discord.MessageEmbed()
 
                             case 'kick':
                                 if (!message.member.roles.cache.some(role => role.name === "Senior Staff")) {
-                                    message.channel.send("You do not have access to this command! Please ask a Staff Member to give you your transcript!")
+                                    message.channel.send("You do not have access to this command! Only Senior Staff Members can kick users!")
                                     return false;
                                 }
                                 const user = message.mentions.users.first();
