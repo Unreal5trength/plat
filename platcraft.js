@@ -380,6 +380,10 @@ client.on('message', message => {
         }
     )
 
+    client.on('guildMemberAdd', (guildMember) => {
+        guildMember.addRole(guildMember.guild.roles.find(role => role.name === "━━━━Player Roles━━━━"));
+     });
+
 client.login(process.env.token);
 console.log('[PlatinumCraft] The Server Bot is Online and Fully Functional (For the Most Part)');
 console.log("If not, regenerate the token and replace it in the code.")
