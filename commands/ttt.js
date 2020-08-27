@@ -122,35 +122,35 @@ module.exports = {
             }
 
 
-            if(positions.A1 === 'x' && positions.A2 === 'x' && positions.A3 === 'o') {
+            if(positions.A1 === 'o' && positions.A2 === 'o' && positions.A3 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.B1 === 'x' && positions.B2 === 'x' && positions.B3 === 'o') {
+            } else if(positions.B1 === 'o' && positions.B2 === 'o' && positions.B3 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.C1 === 'x' && positions.C2 === 'x' && positions.C3 === 'o') {
+            } else if(positions.C1 === 'o' && positions.C2 === 'o' && positions.C3 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.A1 === 'x' && positions.B1 === 'x' && positions.C1 === 'o') {
+            } else if(positions.A1 === 'o' && positions.B1 === 'o' && positions.C1 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.A2 === 'x' && positions.B2 === 'x' && positions.C2 === 'o') {
+            } else if(positions.A2 === 'o' && positions.B2 === 'o' && positions.C2 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.A3 === 'x' && positions.B3 === 'x' && positions.C3 === 'o') {
+            } else if(positions.A3 === 'o' && positions.B3 === 'o' && positions.C3 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.A1 === 'x' && positions.B2 === 'x' && positions.C3 === 'o') {
+            } else if(positions.A1 === 'o' && positions.B2 === 'o' && positions.C3 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
-            } else if(positions.A3 === 'x' && positions.B2 === 'x' && positions.C1 === 'o') {
+            } else if(positions.A3 === 'o' && positions.B2 === 'o' && positions.C1 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
             }
 
 
 
-            if(positions.A1 === value && positions.A2 === value && positions.A3 === value &&positions.B1 === value && positions.B2 === value && positions.B3 === value && positions.C1 === value && positions.C2 === value && positions.C3 === value) {
+            if(positions.A1 === value && positions.A2 === value && positions.A3 === value && positions.B1 === value && positions.B2 === value && positions.B3 === value && positions.C1 === value && positions.C2 === value && positions.C3 === value) {
                 message.channel.send("Game Over! It is a Stalemate. Try again next time.")
                 collector.stop()
             }
