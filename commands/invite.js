@@ -11,9 +11,13 @@ module.exports = {
             let userInv = message.mentions.users.first()
 
             if(!message.member.roles.cache.some(role => role.name === "Staff")) {
-                message.author.send("Only Staff Members can close Tickets! If your ticket has been answered, ask them to close the ticket.");
+                message.author.send("Only Staff Members can invite users to tickets! If your ticket has been answered, ask them to close the ticket.");
                 return;
             }   
+
+            if(!userInv) {
+                return message.channel.send("You must mention a user to invite!")
+            }
 
             if(!message.channel.name.startsWith("ticket")) {
                 return;
