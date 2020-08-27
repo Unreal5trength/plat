@@ -147,6 +147,13 @@ module.exports = {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
             }
+
+
+
+            if(positions.A1 === value && positions.A2 === value && positions.A3 === value &&positions.B1 === value && positions.B2 === value && positions.B3 === value && positions.C1 === value && positions.C2 === value && positions.C3 === value) {
+                message.channel.send("Game Over! It is a Stalemate. Try again next time.")
+                collector.stop()
+            }
         })
 
         collector.on('end', m => {
