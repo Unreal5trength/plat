@@ -1,1 +1,1 @@
-Worker: node platcraft.js
+Worker: node bot.js
