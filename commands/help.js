@@ -77,6 +77,16 @@ module.exports = {
                                         .setTitle("**Tic Tac Toe**")
                                         .setDescription("**Description:** This command allows a user to play Tic Tac Toe against a friend! This command can be used by anyone.\n\n**Usage:** -ttt (USER)\n\n**Aliases:** None.")
                                         message.channel.send(ttt)
+
+                                        break;
+
+                                        case 'suggest':
+                                            let suggest = new Discord.MessageEmbed()
+                                            .setTitle("**Suggestions**")
+                                            .setDescription("**Description:** This command allows a user to create a Suggestion. Users can vote and Staff Members will go through the suggestion before it is applied or denied.! This command can be used by anyone.\n\n**Usage:** -suggest (GLOBAL/MINECRAFT)\n\n**Aliases:** suggestion.")
+                                            message.channel.send(suggest)
+
+                                            break;
         }
     }
 }
