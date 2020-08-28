@@ -98,6 +98,7 @@ module.exports = {
               message.channel.send(`${message.author.username}, your Ticket has been created!`)
               channel.updateOverwrite(message.guild.id, { VIEW_CHANNEL: false });
               channel.updateOverwrite(message.author.id, { VIEW_CHANNEL: true });
+              channel.updateOverwrite('714237057094123570', { VIEW_CHANNEL: true });
               console.log(collected.size)
           }
         )
