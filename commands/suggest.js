@@ -10,10 +10,13 @@ module.exports = {
 
         const suggestionEmbed = new Discord.MessageEmbed()
         .setTitle(`**${args.shift([0]).toUpperCase()} Suggestion**`)
-        .setDescription( `Suggestion created by ${message.author.username}.\n**Suggestion:** ${args.join(" ")}`);
+        .setDescription( `Suggestion created by ${message.author.username}.\n**Suggestion:** ${args.join(" ")}\n\nLet us know what you think of this suggestion by leaving a reaction below!`);
 
         function suggestion() {
-            message.channel.send(suggestionEmbed)
+            message.channel.send(suggestionEmbed).then(message => {
+                message.react("✅")
+                message.react("❌")
+            })
         }
 
         suggestion();
