@@ -15,11 +15,13 @@ module.exports = {
                 return;
             }   
 
-            if(!userInv) {
-                return message.channel.send("You must mention a user to invite!")
-            }
-
             if(!message.channel.name.startsWith("ticket")) {
+                return;
+            } else if (!message.channel.name.startsWith("gs")) {
+                return;
+            } else if (!message.channel.name.startsWith("pr")) {
+                return;
+            } else if (!message.channel.name.startsWith("store")) {
                 return;
             }
 

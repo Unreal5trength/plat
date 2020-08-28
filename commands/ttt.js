@@ -52,47 +52,47 @@ module.exports = {
 
             if(m.content == "A1" && positions.A1 == ' ') {
                 positions.A1 = value;
-                print()
+                print("Current Board")
             }
     
             if(m.content == "A2" && positions.A2 == ' ') {
                 positions.A2 = value;
-                print()
+                print("Current Board")
             }
 
             if(m.content == "A3" && positions.A3 == ' ') {
                 positions.A3 = value;
-                print()
+                print("Current Board")
             }
     
             if(m.content == "B1" && positions.B1 == ' ') {
                 positions.B1 = value;
-                print()
+                print("Current Board")
             }
     
             if(m.content == "B2" && positions.B2 == ' ') {
                 positions.B2 = value;
-                print()
+                print("Current Board")
             }
     
             if(m.content == "B3" && positions.B3 == ' ') {
                 positions.B3 = value;
-                print()
+                print("Current Board")
             }
 
             if(m.content == "C1" && positions.C1 == ' ') {
                 positions.C1 = value;
-                print()
+                print("Current Board")
             }
     
             if(m.content == "C2" && positions.C2 == ' ') {
                 positions.C2 = value;
-                print()
+                print("Current Board")
             }
     
             if(m.content == "C3" && positions.C3 == ' ') {
                 positions.C3 = value;
-                print()
+                print("Current Board")
             }
 
             if(positions.A1 === 'x' && positions.A2 === 'x' && positions.A3 === 'x') {
