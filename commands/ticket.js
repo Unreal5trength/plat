@@ -89,7 +89,7 @@ module.exports = {
                     m.channel.updateOverwrite(message.guild.id, { VIEW_CHANNEL: false });
                     m.channel.updateOverwrite('711987701510963302', { VIEW_CHANNEL: true });
                     m.channel.updateOverwrite(message.author.id, { VIEW_CHANNEL: true });
-
+                    break;
 
               }
             })
