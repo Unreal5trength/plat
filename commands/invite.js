@@ -15,6 +15,10 @@ module.exports = {
                 return;
             }   
 
+            if(!userInv) {
+                message.channel.send("Please mention a user to invite to the Ticket.")
+            }
+
             if(!message.channel.name.startsWith("ticket")) {
                 return;
             } else if (!message.channel.name.startsWith("gs")) {

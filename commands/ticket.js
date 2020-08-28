@@ -50,7 +50,7 @@ module.exports = {
                   m.channel.bulkDelete(2)
                   m.channel.send("Thank you for reaching out! If you picked the wrong category for your ticket, it may take longer for one of our Staff Members to respond!")
                   m.channel.setName(`gs-${message.author.username}`)
-                  message.channel.updateOverwrite('729424741760237650', { VIEW_CHANNEL: true });
+                  message.channel.updateOverwrite('714237057094123570', { VIEW_CHANNEL: true });
                     break;
 
                   case '2':
@@ -58,7 +58,7 @@ module.exports = {
                     m.channel.setParent('748662749659398174')
                     m.channel.send("Please state the Player your are reporting, the time of the issue caused, and the proof and our Staff Members will assist you as soon as possible!")
                     m.channel.setName(`pr-${message.author.username}`)
-                    message.channel.updateOverwrite('729424741760237650', { VIEW_CHANNEL: true });
+                    message.channel.updateOverwrite('714237057094123570', { VIEW_CHANNEL: true });
                       channel.updateOverwrite(message.guild.id, { VIEW_CHANNEL: false });
                       channel.updateOverwrite(message.author.id, { VIEW_CHANNEL: true });
 
@@ -69,7 +69,7 @@ module.exports = {
                     m.channel.setParent('748663001711902821')
                     m.channel.send(`Hello ${message.author.username}! Please state what you purchased, how much the purchase cost, and the time of the purchase. This way, our Store Support Team can assist you quickly!`)
                     m.channel.setName(`store-${message.author.username}`)
-                    message.channel.updateOverwrite('740311144241299516', { VIEW_CHANNEL: true });
+                    message.channel.updateOverwrite('711987701510963302', { VIEW_CHANNEL: true });
                       channel.updateOverwrite(message.guild.id, { VIEW_CHANNEL: false });
                       channel.updateOverwrite(message.author.id, { VIEW_CHANNEL: true });
                     break;
@@ -86,7 +86,7 @@ module.exports = {
                     m.channel.send(`Hello ${message.author.username} and thank you for considering to apply for PlatinumCraft! Before you apply, we would like to go over a couple of things. First of all, before you apply, you must be fourteen years of age. If not, you cannot apply. Also, you must answer all the application questions within 24 hours. If not, we will consider the application abandoned and it will be closed automatically. Now here are the questions:`)
                     m.channel.send(appembed)
                     m.channel.setName(`app-${message.author.username}`)
-                    message.channel.updateOverwrite('740311144241299516', { VIEW_CHANNEL: true });
+                    message.channel.updateOverwrite('711987701510963302', { VIEW_CHANNEL: true });
                       channel.updateOverwrite(message.guild.id, { VIEW_CHANNEL: false });
                       channel.updateOverwrite(message.author.id, { VIEW_CHANNEL: true });
 
