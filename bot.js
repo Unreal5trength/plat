@@ -78,11 +78,4 @@ client.on('message', message => {
     }
 })
 
-client.on('serverNewMember', function() {
-    let Default = message.guild.roles.find(r => r.id === "748389901413646366");
-    let PlayerRoles = message.guild.roles.find(r => r.id === "745480632674811944");
-    member.roles.add(Default)
-    member.roles.add(PlayerRoles)
-});
-
 client.login(process.env.token);
