@@ -21,8 +21,8 @@ module.exports = {
         let challenged = message.mentions.users.first();
         let challenger = message.author;
 
-        function print() {
-            message.channel.send(`${tripleTick} ${positions.A1} | ${positions.A2} | ${positions.A3} A\n-----------\n ${positions.B1} | ${positions.B2} | ${positions.B3} B\n-----------\n ${positions.C1} | ${positions.C2  } | ${positions.C3} C\n 1   2   3${tripleTick}`)
+        function print(currentBoard) {
+            message.channel.send(`${currentBoard} ${tripleTick} ${positions.A1} | ${positions.A2} | ${positions.A3} A\n-----------\n ${positions.B1} | ${positions.B2} | ${positions.B3} B\n-----------\n ${positions.C1} | ${positions.C2  } | ${positions.C3} C\n 1   2   3${tripleTick}`)
         }
 
         if(!challenged) {
@@ -37,7 +37,7 @@ module.exports = {
             let value = challenger.id === m.author.id ? 'x' : 'o';
             if(m.content == "accept" && m.author == challenged) {
                 m.channel.send("You have accepted the challenge. It will begin shortly.")
-                print()
+                print("Current Board")
             }
 
             if(m.content == "deny") {
@@ -52,46 +52,55 @@ module.exports = {
 
             if(m.content == "A1" && positions.A1 == ' ') {
                 positions.A1 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
     
             if(m.content == "A2" && positions.A2 == ' ') {
                 positions.A2 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
 
             if(m.content == "A3" && positions.A3 == ' ') {
                 positions.A3 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
     
             if(m.content == "B1" && positions.B1 == ' ') {
                 positions.B1 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
     
             if(m.content == "B2" && positions.B2 == ' ') {
                 positions.B2 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
     
             if(m.content == "B3" && positions.B3 == ' ') {
                 positions.B3 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
 
             if(m.content == "C1" && positions.C1 == ' ') {
                 positions.C1 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
     
             if(m.content == "C2" && positions.C2 == ' ') {
                 positions.C2 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
     
             if(m.content == "C3" && positions.C3 == ' ') {
                 positions.C3 = value;
+                m.channel.bulkDelete(2)
                 print("Current Board")
             }
 
@@ -145,13 +154,6 @@ module.exports = {
                 collector.stop()
             } else if(positions.A3 === 'o' && positions.B2 === 'o' && positions.C1 === 'o') {
                 m.channel.send(`Game ended! Someone has won the match!`)
-                collector.stop()
-            }
-
-
-
-            if(positions.A1 === value && positions.A2 === value && positions.A3 === value && positions.B1 === value && positions.B2 === value && positions.B3 === value && positions.C1 === value && positions.C2 === value && positions.C3 === value) {
-                message.channel.send("Game Over! It is a Stalemate. Try again next time.")
                 collector.stop()
             }
         })
