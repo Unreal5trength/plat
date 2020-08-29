@@ -78,8 +78,9 @@ client.on('message', message => {
     }
 })
 
-client.on('guildMemberAdd', guildMember => {
-    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Default"));
- });
+client.on('serverNewMember', function(server, user) {
+    user.addTo(server.roles.get("name", "Default"));
+    user.addTo(server.roles.get("name", "⁣     ━━━Player Roles━━━"));
+});
 
 client.login(process.env.token);
