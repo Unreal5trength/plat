@@ -22,7 +22,9 @@ module.exports = {
         let challenger = message.author;
 
         function print(currentBoard) {
-            message.channel.send(`${currentBoard} ${tripleTick} ${positions.A1} | ${positions.A2} | ${positions.A3} A\n-----------\n ${positions.B1} | ${positions.B2} | ${positions.B3} B\n-----------\n ${positions.C1} | ${positions.C2  } | ${positions.C3} C\n 1   2   3${tripleTick}`)
+            let tttEmbed = new Discord.MessageEmbed()
+                .setDescription(`${currentBoard} ${tripleTick} ${positions.A1} | ${positions.A2} | ${positions.A3} A\n-----------\n ${positions.B1} | ${positions.B2} | ${positions.B3} B\n-----------\n ${positions.C1} | ${positions.C2  } | ${positions.C3} C\n 1   2   3${tripleTick}`)
+            message.channel.send(tttEmbed)
         }
 
         if(!challenged) {
@@ -35,7 +37,7 @@ module.exports = {
 
         collector.on('collect', m => {
             let value = challenger.id === m.author.id ? 'x' : 'o';
-            if(m.content == "accept" && m.author == challenged) {
+            if(m.content == "accept" || m.content == "a" || m.content == "A" && m.author == challenged) {
                 m.channel.send("You have accepted the challenge. It will begin shortly.")
                 print("Current Board")
             }
@@ -156,6 +158,11 @@ module.exports = {
                 m.channel.send(`Game ended! Someone has won the match!`)
                 collector.stop()
             }
+
+            if (!Object.values(positions).includes(" ")) {
+                m.channel.send("Board full. Ending match...")
+                collector.stop()
+              };
         })
 
         collector.on('end', m => {
