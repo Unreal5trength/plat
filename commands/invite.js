@@ -9,7 +9,7 @@ module.exports = {
 
             let userInv = message.mentions.users.first()
 
-            if(!message.member.roles.cache.some(role => role.name === "Staff")) {
+            if(!message.member.roles.cache.some(role => role.name === "Senior Members")) {
                 message.author.send("Only Staff Members can invite users to tickets! If your ticket has been answered, ask them to close the ticket.");
                 return;
             }   
